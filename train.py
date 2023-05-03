@@ -51,13 +51,13 @@ train_datagen = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale=1./255)
 
-training_set = train_datagen.flow_from_directory('data2/train',
+training_set = train_datagen.flow_from_directory('train',
                                                  target_size=(sz, sz),
                                                  batch_size=10,
                                                  color_mode='grayscale',
                                                  class_mode='categorical')
 
-test_set = test_datagen.flow_from_directory('data2/test',
+test_set = test_datagen.flow_from_directory('test',
                                             target_size=(sz , sz),
                                             batch_size=10,
                                             color_mode='grayscale',
